@@ -1,5 +1,4 @@
 <template>
-  <!-- PROJECTS -->
   <div class="projects__content grid" id="projects">
     <article class="projects__card">
       <img src="../assets/img/code.jpeg" alt="" class="projects__img" />

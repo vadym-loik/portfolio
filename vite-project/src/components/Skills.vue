@@ -1,5 +1,4 @@
 <template>
-  <!-- SKILLS -->
   <div class="skills__content grid" id="skills">
     <div class="skills__area">
       <h3 class="skills__title">Frontend developer</h3>
@@ -11,7 +10,7 @@
 
             <div>
               <h3 class="skills__name">HTML</h3>
-              <span class="skills__level">Advance</span>
+              <span class="skills__level">Intermediate</span>
             </div>
           </div>
 
@@ -20,7 +19,7 @@
 
             <div>
               <h3 class="skills__name">CSS</h3>
-              <span class="skills__level">Advance</span>
+              <span class="skills__level">Intermediate</span>
             </div>
           </div>
 

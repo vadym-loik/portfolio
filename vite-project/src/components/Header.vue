@@ -1,5 +1,13 @@
 <template>
   <header class="profile container">
+    <!-- THEME BUTTON -->
+    <!-- <i
+      class="ri-moon-line change-theme"
+      :class="{ currentIcon: getCurrentIcon }"
+      id="theme-button"
+      @click="toggleTheme"
+    ></i> -->
+
     <div class="profile__container grid">
       <div class="profile__data">
         <div class="profile__border">
@@ -19,18 +27,18 @@
             target="_blank"
             class="profile__social-link"
           >
-            <i class="ri-linkedin-box-fill"></i>
+            <i class="ri-linkedin-box-line"></i>
           </a>
           <a
             href="https://github.com/vadym-loik"
             target="_blank"
             class="profile__social-link"
           >
-            <i class="ri-github-fill"></i>
+            <i class="ri-github-line"></i>
           </a>
-          <a href="" target="_blank" class="profile__social-link">
-            <i class="ri-twitter-fill"></i>
-          </a>
+          <!-- <a href="" target="_blank" class="profile__social-link">
+            <i class="ri-twitter-line"></i>
+          </a> -->
         </ul>
       </div>
 
@@ -44,7 +52,7 @@
           </p>
         </div>
         <div class="profile__info-group">
-          <h3 class="profile__info-number">7</h3>
+          <h3 class="profile__info-number">6</h3>
           <p class="profile__info-description">
             Completed <br />
             projects
@@ -59,10 +67,63 @@
 
 <script setup>
 import ButtonsHeader from './ButtonsHeader.vue';
+
+// import { ref, onMounted } from 'vue';
+
+// const darkTheme = 'dark-theme';
+// const iconTheme = 'ri-sun-line';
+
+// const selectedTheme = localStorage.getItem('selected-theme');
+// const selectedIcon = localStorage.getItem('selected-icon');
+
+// const currentTheme = ref('');
+
+// const toggleTheme = () => {
+//   document.body.classList.toggle(darkTheme);
+//   themeButton.classList.toggle(iconTheme);
+//   localStorage.setItem('selected-theme', getCurrentTheme());
+//   localStorage.setItem('selected-icon', getCurrentIcon());
+// };
+
+// const getCurrentTheme = () => {
+//   return document.body.classList.contains(darkTheme) ? 'dark' : 'light';
+// };
+
+// const getCurrentIcon = () => {
+//   return themeButton.classList.contains(iconTheme)
+//     ? 'ri-moon-line'
+//     : 'ri-sun-line';
+// };
+
+// onMounted(() => {
+//   if (selectedTheme) {
+//     document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](
+//       darkTheme
+//     );
+//     themeButton.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](
+//       iconTheme
+//     );
+//   }
+//   currentTheme.value = getCurrentTheme();
+// });
 </script>
 
 <style lang="scss" scoped>
 @import '../assets/scss/variables.scss';
+
+.change-theme {
+  position: absolute;
+  top: 1.5rem;
+  right: 0;
+  font-size: 1.25rem;
+  color: $title-color;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.change-theme:hover {
+  color: $first-color;
+}
 
 .profile {
   position: relative;
@@ -104,6 +165,7 @@ import ButtonsHeader from './ButtonsHeader.vue';
 
   &__name {
     font-size: $h2-font-size;
+    margin-bottom: 0.375rem
   }
 
   &__profession {

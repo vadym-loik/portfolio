@@ -3,18 +3,28 @@
     <section class="filters container">
       <!-- FILTERS TABS -->
       <ul class="filters__content">
-        <button class="filters__button" data-target="#projects">
+        <button
+          class="filters__button"
+          @click.prevent="toggleProjectsSection"
+          :class="{ active: isActive !== projects }"
+        >
           Projects
         </button>
 
-        <button class="filters__button" data-target="#skills">Skills</button>
+        <button
+          class="filters__button"
+          @click.prevent="toggleSkillsSection"
+          :class="{ active: isActive !== skills }"
+        >
+          Skills
+        </button>
       </ul>
 
       <div class="filters__sections">
         <!-- PROJECTS -->
-        <Projects data-content />
+        <Projects v-if="projects" />
         <!-- SKILLS -->
-        <Skills data-content />
+        <Skills v-if="skills" />
       </div>
     </section>
   </main>
@@ -23,6 +33,28 @@
 <script setup>
 import Projects from './Projects.vue';
 import Skills from './Skills.vue';
+
+import { ref } from 'vue';
+
+const projects = ref(false);
+const skills = ref(false);
+let isActive = ref(false);
+
+function toggleProjectsSection() {
+  projects.value = !projects.value;
+
+  if (projects.value) {
+    skills.value = false;
+  }
+}
+
+function toggleSkillsSection() {
+  skills.value = !skills.value;
+
+  if (skills.value) {
+    projects.value = false;
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -71,7 +103,7 @@ import Skills from './Skills.vue';
   }
 }
 
-.filters [data-content] {
-  display: none;
+.active {
+  background-color: $body-color;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <!-- BUTTONS -->
   <div class="profile__buttons">
-    <a download="" href="../assets/pdf/CV_Vadym_Loik.pdf" class="button"
+    <a href="https://drive.google.com/file/d/1UknQJZWkHioRnakHJiRyO-sCEkJKJhLb/view?usp=drive_link" class="button" target="_blank"
       >Download CV <i class="ri-folder-download-fill"></i
     ></a>
 
@@ -11,12 +11,9 @@
         target="_blank"
         class="button button__small button__gray"
       >
-        <i class="ri-whatsapp-fill"></i>
+        <i class="ri-whatsapp-line"></i>
       </a>
 
-      <a href="" target="_blank" class="button button__small button__gray">
-        <i class="ri-telegram-fill"></i>
-      </a>
     </div>
   </div>
 </template>
