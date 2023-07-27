@@ -12,7 +12,7 @@
       <div class="profile__data">
         <div class="profile__border">
           <div class="profile__perfil">
-            <img src="../assets/img/IMG_3165.JPG" alt="profile photo" />
+            <img src="../assets/img/vadym_loik.jpg" alt="profile photo" />
           </div>
         </div>
 
@@ -22,18 +22,10 @@
 
         <!-- SOCIAL NETWORKS-->
         <ul class="profile__social">
-          <a
-            href="https://www.linkedin.com/in/vadym-loik-651ba27b/"
-            target="_blank"
-            class="profile__social-link"
-          >
+          <a href="https://www.linkedin.com/in/vadym-loik-651ba27b/" target="_blank" class="profile__social-link">
             <i class="ri-linkedin-box-line"></i>
           </a>
-          <a
-            href="https://github.com/vadym-loik"
-            target="_blank"
-            class="profile__social-link"
-          >
+          <a href="https://github.com/vadym-loik" target="_blank" class="profile__social-link">
             <i class="ri-github-line"></i>
           </a>
           <!-- <a href="" target="_blank" class="profile__social-link">
