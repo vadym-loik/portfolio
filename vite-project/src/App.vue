@@ -5,14 +5,19 @@ import Footer from './components/Footer.vue';
 </script>
 
 <template>
-  <Header />
-  <Main />
-  <Footer />
+  <div class="container">
+    <Header />
+    <Main />
+    <Footer />
+  </div>
 </template>
 
 <style lang="scss" scoped>
 @import './assets/scss/variables.scss';
 
+.container {
+  margin: 0 auto;
+}
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
   width: 0.6rem;
