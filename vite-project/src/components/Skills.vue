@@ -42,7 +42,7 @@
 import { ref } from 'vue';
 
 const frontSkills = ref([
-  'HTML', 'CSS', 'JavaScript', 'Vue.js', 'Git', 'SASS'
+  'HTML', 'CSS', 'JavaScript', 'Vue.js', 'Git', 'SASS',
 ])
 
 const backSkills = ref([
@@ -65,19 +65,21 @@ const backSkills = ref([
 
 .skills__box {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   column-gap: 3rem;
 }
 
-.skills__group {
-  display: grid;
-  align-content: flex-start;
-  row-gap: 1rem;
-}
+// .skills__group {
+//   display: grid;
+//   align-content: flex-start;
+//   row-gap: 1rem;
+// }
 
 .skills__data {
   display: flex;
-  column-gap: 0.5rem;
+  column-gap: 0.375rem;
+  margin-bottom: 0.375rem;
 }
 
 .skills__data i {
