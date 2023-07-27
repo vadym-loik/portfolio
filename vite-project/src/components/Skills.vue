@@ -4,62 +4,16 @@
       <h3 class="skills__title">Frontend developer</h3>
 
       <div class="skills__box">
-        <div class="skills__group">
+        <div class="skills__group" v-for="skill in frontSkills">
           <div class="skills__data">
             <i class="ri-checkbox-circle-line"></i>
 
             <div>
-              <h3 class="skills__name">HTML</h3>
+              <h3 class="skills__name">{{ skill }}</h3>
               <span class="skills__level">Intermediate</span>
             </div>
           </div>
 
-          <div class="skills__data">
-            <i class="ri-checkbox-circle-line"></i>
-
-            <div>
-              <h3 class="skills__name">CSS</h3>
-              <span class="skills__level">Intermediate</span>
-            </div>
-          </div>
-
-          <div class="skills__data">
-            <i class="ri-checkbox-circle-line"></i>
-
-            <div>
-              <h3 class="skills__name">JavaScript</h3>
-              <span class="skills__level">Intermediate</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="skills__group">
-          <div class="skills__data">
-            <i class="ri-checkbox-circle-line"></i>
-
-            <div>
-              <h3 class="skills__name">Vue.js</h3>
-              <span class="skills__level">Intermediate</span>
-            </div>
-          </div>
-
-          <div class="skills__data">
-            <i class="ri-checkbox-circle-line"></i>
-
-            <div>
-              <h3 class="skills__name">Git</h3>
-              <span class="skills__level">Intermediate</span>
-            </div>
-          </div>
-
-          <div class="skills__data">
-            <i class="ri-checkbox-circle-line"></i>
-
-            <div>
-              <h3 class="skills__name">Sass</h3>
-              <span class="skills__level">Intermediate</span>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -68,69 +22,33 @@
       <h3 class="skills__title">Backend developer</h3>
 
       <div class="skills__box">
-        <div class="skills__group">
+        <div class="skills__group" v-for="skill in backSkills">
           <div class="skills__data">
             <i class="ri-checkbox-circle-line"></i>
 
             <div>
-              <h3 class="skills__name">Node.js</h3>
+              <h3 class="skills__name">{{ skill }}</h3>
               <span class="skills__level">Basic</span>
             </div>
           </div>
 
-          <div class="skills__data">
-            <i class="ri-checkbox-circle-line"></i>
-
-            <div>
-              <h3 class="skills__name">MySQL</h3>
-              <span class="skills__level">Basic</span>
-            </div>
-          </div>
-
-          <div class="skills__data">
-            <i class="ri-checkbox-circle-line"></i>
-
-            <div>
-              <h3 class="skills__name">NoSQL</h3>
-              <span class="skills__level">Basic</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="skills__group">
-          <div class="skills__data">
-            <i class="ri-checkbox-circle-line"></i>
-
-            <div>
-              <h3 class="skills__name">MariaDB</h3>
-              <span class="skills__level">Basic</span>
-            </div>
-          </div>
-
-          <div class="skills__data">
-            <i class="ri-checkbox-circle-line"></i>
-
-            <div>
-              <h3 class="skills__name">MongoDB</h3>
-              <span class="skills__level">Basic</span>
-            </div>
-          </div>
-
-          <div class="skills__data">
-            <i class="ri-checkbox-circle-line"></i>
-
-            <div>
-              <h3 class="skills__name">CORS</h3>
-              <span class="skills__level">Basic</span>
-            </div>
-          </div>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from 'vue';
+
+const frontSkills = ref([
+  'HTML', 'CSS', 'JavaScript', 'Vue.js', 'Git', 'SASS'
+])
+
+const backSkills = ref([
+  'Node.js', 'MySQL', 'NoSQL', 'MariaDB', 'MongoDB', 'CORS'
+])
+</script>
 
 <style lang="scss" scoped>
 @import '../assets/scss/variables.scss';
