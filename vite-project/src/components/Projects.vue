@@ -2,7 +2,7 @@
   <div>
     <div class="projects__content" id="projects" v-for="(project, index) in allProjects" :key="index">
       <article class="projects__card">
-        <img :src="project.img" alt="" class="projects__img" />
+        <img :src="project.img" alt="project screenshot" class="projects__img" />
         <div class="projects__modal">
           <div>
             <span class="projects__subtitle">{{ project.subtitle }}</span>
@@ -21,31 +21,31 @@
 import { ref } from 'vue';
 
 const allProjects = ref([{
-  img: '../assets/img/groupomania.jpeg',
+  img: '/src/images/groupomania.jpg',
   subtitle: 'Web',
   title: 'Groupomania',
   link: 'https://github.com/vadym-loik/Groupomania',
 },
 {
-  img: '../assets/img/piiquante.jpeg',
+  img: '/src/images/piiquante.jpg',
   subtitle: 'Web',
   title: 'Piiquante',
   link: 'https://github.com/vadym-loik/Piiquante-main',
 },
 {
-  img: '../assets/img/kanap.jpeg',
+  img: '/src/images/kanap.jpg',
   subtitle: 'Web',
   title: 'Kanap',
   link: 'https://github.com/vadym-loik/kanap',
 },
 {
-  img: '../assets/img/ohMyFood.jpeg',
+  img: '/src/images/ohMyFood.jpg',
   subtitle: 'Web',
   title: 'OhMyFood',
   link: 'https://github.com/vadym-loik/ohMyFood2',
 },
 {
-  img: '../assets/img/goMikeDesign.jpeg',
+  img: '/src/images/goMikeDesign.jpg',
   subtitle: 'Web',
   title: 'Optimize',
   link: 'https://github.com/vadym-loik/optimize',
