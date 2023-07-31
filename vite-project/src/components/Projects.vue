@@ -21,31 +21,31 @@
 import { ref } from 'vue';
 
 const allProjects = ref([{
-  img: '../src/assets/img/groupomania.png',
+  img: '../src/assets/img/groupomania.jpeg',
   subtitle: 'Web',
   title: 'Groupomania',
   link: 'https://github.com/vadym-loik/Groupomania',
 },
 {
-  img: '../src/assets/img/piiquante.png',
+  img: '../src/assets/img/piiquante.jpeg',
   subtitle: 'Web',
   title: 'Piiquante',
   link: 'https://github.com/vadym-loik/Piiquante-main',
 },
 {
-  img: '../src/assets/img/kanap.png',
+  img: '../src/assets/img/kanap.jpeg',
   subtitle: 'Web',
   title: 'Kanap',
   link: 'https://github.com/vadym-loik/kanap',
 },
 {
-  img: '../src/assets/img/ohMyFood.png',
+  img: '../src/assets/img/ohMyFood.jpeg',
   subtitle: 'Web',
   title: 'OhMyFood',
   link: 'https://github.com/vadym-loik/ohMyFood2',
 },
 {
-  img: '../src/assets/img/goMikeDesign.png',
+  img: '../src/assets/img/goMikeDesign.jpeg',
   subtitle: 'Web',
   title: 'Optimize',
   link: 'https://github.com/vadym-loik/optimize',
