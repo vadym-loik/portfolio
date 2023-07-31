@@ -48,7 +48,7 @@ const frontSkills = ref([
 ])
 
 const backSkills = ref([
-  'Node.js', 'MySQL', 'NoSQL', 'MariaDB', 'MongoDB', 'CORS'
+  'Node.js', 'MySQL', 'NoSQL', 'MariaDB', 'MongoDB', 'Express.js', 'Mongoose',
 ])
 </script>
 
