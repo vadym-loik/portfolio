@@ -91,7 +91,7 @@ const allProjects = ref([{
 .projects__modal {
   position: absolute;
   width: 100%;
-  // height: 100%;
+  height: 50%;
   bottom: -100%;
   left: 0;
   background: linear-gradient(180deg,
