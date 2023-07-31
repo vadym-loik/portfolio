@@ -1,7 +1,9 @@
 <template>
-  <footer class="footer container">
-    <span class="footer__copy"> &#169; Vadym Loik. All rights reserved. </span>
-  </footer>
+  <div>
+    <footer class="footer container">
+      <span class="footer__copy"> &#169; Vadym Loik. All rights reserved. </span>
+    </footer>
+  </div>
 </template>
 
 <script setup></script>

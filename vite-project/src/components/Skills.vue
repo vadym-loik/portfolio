@@ -1,37 +1,39 @@
 <template>
-  <div class="skills__content grid" id="skills">
-    <div class="skills__area">
-      <h3 class="skills__title">Frontend developer</h3>
+  <div>
+    <div class="skills__content grid" id="skills">
+      <div class="skills__area">
+        <h3 class="skills__title">Frontend developer</h3>
 
-      <div class="skills__box">
-        <div class="skills__group" v-for="skill in frontSkills">
-          <div class="skills__data">
-            <i class="ri-checkbox-circle-line"></i>
+        <div class="skills__box">
+          <div class="skills__group" v-for="skill in frontSkills">
+            <div class="skills__data">
+              <i class="ri-checkbox-circle-line"></i>
 
-            <div>
-              <h3 class="skills__name">{{ skill }}</h3>
-              <span class="skills__level">Intermediate</span>
+              <div>
+                <h3 class="skills__name">{{ skill }}</h3>
+                <span class="skills__level">Intermediate</span>
+              </div>
             </div>
-          </div>
 
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="skills__area">
-      <h3 class="skills__title">Backend developer</h3>
+      <div class="skills__area">
+        <h3 class="skills__title">Backend developer</h3>
 
-      <div class="skills__box">
-        <div class="skills__group" v-for="skill in backSkills">
-          <div class="skills__data">
-            <i class="ri-checkbox-circle-line"></i>
+        <div class="skills__box">
+          <div class="skills__group" v-for="skill in backSkills">
+            <div class="skills__data">
+              <i class="ri-checkbox-circle-line"></i>
 
-            <div>
-              <h3 class="skills__name">{{ skill }}</h3>
-              <span class="skills__level">Basic</span>
+              <div>
+                <h3 class="skills__name">{{ skill }}</h3>
+                <span class="skills__level">Basic</span>
+              </div>
             </div>
-          </div>
 
+          </div>
         </div>
       </div>
     </div>

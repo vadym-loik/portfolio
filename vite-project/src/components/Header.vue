@@ -1,60 +1,62 @@
 <template>
-  <header class="profile container">
-    <!-- THEME BUTTON -->
-    <!-- <i
+  <div>
+    <header class="profile container">
+      <!-- THEME BUTTON -->
+      <!-- <i
       class="ri-moon-line change-theme"
       :class="{ currentIcon: getCurrentIcon }"
       id="theme-button"
       @click="toggleTheme"
     ></i> -->
 
-    <div class="profile__container grid">
-      <div class="profile__data">
-        <div class="profile__border">
-          <div class="profile__perfil">
-            <img src="../assets/img/vadym_loik.jpg" alt="profile photo" />
+      <div class="profile__container grid">
+        <div class="profile__data">
+          <div class="profile__border">
+            <div class="profile__perfil">
+              <img src="../assets/img/vadym_loik.jpg" alt="profile photo" />
+            </div>
+          </div>
+
+          <!-- TITLE -->
+          <h2 class="profile__name">Vadym Loik</h2>
+          <h3 class="profile__profession">Web Developer</h3>
+
+          <!-- SOCIAL NETWORKS-->
+          <ul class="profile__social">
+            <a href="https://www.linkedin.com/in/vadym-loik-651ba27b/" target="_blank" class="profile__social-link">
+              <i class="ri-linkedin-box-line"></i>
+            </a>
+            <a href="https://github.com/vadym-loik" target="_blank" class="profile__social-link">
+              <i class="ri-github-line"></i>
+            </a>
+            <!-- <a href="" target="_blank" class="profile__social-link">
+            <i class="ri-twitter-line"></i>
+          </a> -->
+          </ul>
+        </div>
+
+        <!-- PROFILE INFO -->
+        <div class="profile__info grid">
+          <div class="profile__info-group">
+            <h3 class="profile__info-number">1</h3>
+            <p class="profile__info-description">
+              Year of <br />
+              work
+            </p>
+          </div>
+          <div class="profile__info-group">
+            <h3 class="profile__info-number">6</h3>
+            <p class="profile__info-description">
+              Completed <br />
+              projects
+            </p>
           </div>
         </div>
 
-        <!-- TITLE -->
-        <h2 class="profile__name">Vadym Loik</h2>
-        <h3 class="profile__profession">Web Developer</h3>
-
-        <!-- SOCIAL NETWORKS-->
-        <ul class="profile__social">
-          <a href="https://www.linkedin.com/in/vadym-loik-651ba27b/" target="_blank" class="profile__social-link">
-            <i class="ri-linkedin-box-line"></i>
-          </a>
-          <a href="https://github.com/vadym-loik" target="_blank" class="profile__social-link">
-            <i class="ri-github-line"></i>
-          </a>
-          <!-- <a href="" target="_blank" class="profile__social-link">
-            <i class="ri-twitter-line"></i>
-          </a> -->
-        </ul>
+        <ButtonsHeader />
       </div>
-
-      <!-- PROFILE INFO -->
-      <div class="profile__info grid">
-        <div class="profile__info-group">
-          <h3 class="profile__info-number">1</h3>
-          <p class="profile__info-description">
-            Year of <br />
-            work
-          </p>
-        </div>
-        <div class="profile__info-group">
-          <h3 class="profile__info-number">6</h3>
-          <p class="profile__info-description">
-            Completed <br />
-            projects
-          </p>
-        </div>
-      </div>
-
-      <ButtonsHeader />
-    </div>
-  </header>
+    </header>
+  </div>
 </template>
 
 <script setup>

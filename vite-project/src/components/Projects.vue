@@ -1,76 +1,58 @@
 <template>
-  <div class="projects__content grid" id="projects">
-    <article class="projects__card">
-      <img src="../assets/img/code.jpeg" alt="" class="projects__img" />
-      <div class="projects__modal">
-        <div>
-          <span class="projects__subtitle">Web</span>
-          <h3 class="projects__title">Groupomania</h3>
-          <a
-            href="https://github.com/vadym-loik/Groupomania"
-            class="projects__button button button__small"
-            target="_blank"
-          >
-            <i class="ri-link"></i>
-          </a>
+  <div>
+    <div class="projects__content" id="projects" v-for="(project, index) in allProjects" :key="index">
+      <article class="projects__card">
+        <img :src="project.img" alt="" class="projects__img" />
+        <div class="projects__modal">
+          <div>
+            <span class="projects__subtitle">{{ project.subtitle }}</span>
+            <h3 class="projects__title">{{ project.title }}</h3>
+            <a :href="project.link" class="projects__button button button__small" target="_blank">
+              <i class="ri-link"></i>
+            </a>
+          </div>
         </div>
-      </div>
-    </article>
-
-    <article class="projects__card">
-      <img src="../assets/img/code.jpeg" alt="" class="projects__img" />
-      <div class="projects__modal">
-        <div>
-          <span class="projects__subtitle">Web</span>
-          <h3 class="projects__title">Piiquante</h3>
-          <a
-            href="https://github.com/vadym-loik/Piiquante-main"
-            class="projects__button button button__small"
-            target="_blank"
-          >
-            <i class="ri-link"></i>
-          </a>
-        </div>
-      </div>
-    </article>
-
-    <article class="projects__card">
-      <img src="../assets/img/code.jpeg" alt="" class="projects__img" />
-      <div class="projects__modal">
-        <div>
-          <span class="projects__subtitle">Web</span>
-          <h3 class="projects__title">Kanap</h3>
-          <a
-            href="https://github.com/vadym-loik/kanap"
-            class="projects__button button button__small"
-            target="_blank"
-          >
-            <i class="ri-link"></i>
-          </a>
-        </div>
-      </div>
-    </article>
-
-    <article class="projects__card">
-      <img src="../assets/img/code.jpeg" alt="" class="projects__img" />
-      <div class="projects__modal">
-        <div>
-          <span class="projects__subtitle">Web</span>
-          <h3 class="projects__title">OhMyFood</h3>
-          <a
-            href="https://github.com/vadym-loik/ohMyFood2"
-            class="projects__button button button__small"
-            target="_blank"
-          >
-            <i class="ri-link"></i>
-          </a>
-        </div>
-      </div>
-    </article>
+      </article>
+    </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from 'vue';
+
+const allProjects = ref([{
+  img: '/src/assets/img/code.jpeg',
+  subtitle: 'Web',
+  title: 'Groupomania',
+  link: 'https://github.com/vadym-loik/Groupomania',
+},
+{
+  img: '/src/assets/img/code.jpeg',
+  subtitle: 'Web',
+  title: 'Piiquante',
+  link: 'https://github.com/vadym-loik/Piiquante-main',
+},
+{
+  img: '/src/assets/img/code.jpeg',
+  subtitle: 'Web',
+  title: 'Kanap',
+  link: 'https://github.com/vadym-loik/kanap',
+},
+{
+  img: '/src/assets/img/code.jpeg',
+  subtitle: 'Web',
+  title: 'OhMyFood',
+  link: 'https://github.com/vadym-loik/ohMyFood2',
+},
+{
+  img: '/src/assets/img/code.jpeg',
+  subtitle: 'Web',
+  title: 'Optimize',
+  link: 'https://github.com/vadym-loik/optimize',
+},
+]);
+
+</script>
 
 <style lang="scss" scoped>
 @import '../assets/scss/variables.scss';
@@ -87,30 +69,36 @@
   box-shadow: 0 8px 24px hsla($hue, $sat, $lig, 0.25);
 }
 
+
 .projects__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   position: relative;
   border-radius: 1rem;
   overflow: hidden;
 }
 
-.projects__card img {
-  width: 100%;
-  height: 100%;
+.projects__content:not(:last-child) {
+  margin-bottom: 20px;
 }
+
+// .projects__card img {
+//   width: 100%;
+//   height: 100%;
+// }
 
 .projects__modal {
   position: absolute;
   width: 100%;
-  height: 100%;
+  // height: 100%;
   bottom: -100%;
   left: 0;
-  background: linear-gradient(
-    180deg,
-    hsla($hue, 24%, 40%, 0.3) 0%,
-    hsla($hue, 24%, 4%, 1) 95%
-  );
-  display: grid;
-  align-items: flex-end;
+  background: linear-gradient(180deg,
+      hsla($hue, 24%, 40%, 0.3) 0%,
+      hsla($hue, 24%, 4%, 1) 95%);
+  // display: grid;
+  // align-items: flex-end;
   padding: 1.5rem 1.25rem;
   transition: 0.3s;
 }

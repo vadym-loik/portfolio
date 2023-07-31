@@ -1,19 +1,17 @@
 <template>
-  <!-- BUTTONS -->
-  <div class="profile__buttons">
-    <a href="https://drive.google.com/file/d/1UknQJZWkHioRnakHJiRyO-sCEkJKJhLb/view?usp=drive_link" class="button" target="_blank"
-      >Download CV <i class="ri-folder-download-fill"></i
-    ></a>
+  <div>
+    <!-- BUTTONS -->
+    <div class="profile__buttons">
+      <a href="https://drive.google.com/file/d/1UknQJZWkHioRnakHJiRyO-sCEkJKJhLb/view?usp=drive_link" class="button"
+        target="_blank">Download CV <i class="ri-folder-download-fill"></i></a>
 
-    <div class="profile__buttons-small">
-      <a
-        href="https://api.whatsapp.com/send?phone=+33768856944&text=Hello, more information!"
-        target="_blank"
-        class="button button__small button__gray"
-      >
-        <i class="ri-whatsapp-line"></i>
-      </a>
+      <div class="profile__buttons-small">
+        <a href="https://api.whatsapp.com/send?phone=+33768856944&text=Hello, more information!" target="_blank"
+          class="button button__small button__gray">
+          <i class="ri-whatsapp-line"></i>
+        </a>
 
+      </div>
     </div>
   </div>
 </template>

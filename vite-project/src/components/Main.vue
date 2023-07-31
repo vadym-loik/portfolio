@@ -1,33 +1,28 @@
 <template>
-  <main class="main">
-    <section class="filters container">
-      <!-- FILTERS TABS -->
-      <ul class="filters__content">
-        <button
-          class="filters__button"
-          @click.prevent="toggleProjectsSection"
-          :class="{ active: isActive !== projects }"
-        >
-          Projects
-        </button>
+  <div>
+    <main class="main">
+      <section class="filters container">
+        <!-- FILTERS TABS -->
+        <ul class="filters__content">
+          <button class="filters__button" @click.prevent="toggleProjectsSection"
+            :class="{ active: isActive !== projects }">
+            Projects
+          </button>
 
-        <button
-          class="filters__button"
-          @click.prevent="toggleSkillsSection"
-          :class="{ active: isActive !== skills }"
-        >
-          Skills
-        </button>
-      </ul>
+          <button class="filters__button" @click.prevent="toggleSkillsSection" :class="{ active: isActive !== skills }">
+            Skills
+          </button>
+        </ul>
 
-      <div class="filters__sections">
-        <!-- PROJECTS -->
-        <Projects v-if="projects" />
-        <!-- SKILLS -->
-        <Skills v-if="skills" />
-      </div>
-    </section>
-  </main>
+        <div class="filters__sections">
+          <!-- PROJECTS -->
+          <Projects id="projects" v-if="projects" />
+          <!-- SKILLS -->
+          <Skills id="skills" v-if="skills" />
+        </div>
+      </section>
+    </main>
+  </div>
 </template>
 
 <script setup>
