@@ -20,32 +20,39 @@
 <script setup>
 import { ref } from 'vue';
 
+import Photo1 from '@/assets/images/groupomania.png';
+import Photo2 from '@/assets/images/piiquante.png';
+import Photo3 from '@/assets/images/kanap.png';
+import Photo4 from '@/assets/images/ohMyFood.png';
+import Photo5 from '@/assets/images/goMikeDesign.png';
+
+
 const allProjects = ref([{
-  img: '/src/images/groupomania.jpg',
+  img: Photo1,
   subtitle: 'Web',
   title: 'Groupomania',
   link: 'https://github.com/vadym-loik/Groupomania',
 },
 {
-  img: '/src/images/piiquante.jpg',
+  img: Photo2,
   subtitle: 'Web',
   title: 'Piiquante',
   link: 'https://github.com/vadym-loik/Piiquante-main',
 },
 {
-  img: '/src/images/kanap.jpg',
+  img: Photo3,
   subtitle: 'Web',
   title: 'Kanap',
   link: 'https://github.com/vadym-loik/kanap',
 },
 {
-  img: '/src/images/ohMyFood.jpg',
+  img: Photo4,
   subtitle: 'Web',
   title: 'OhMyFood',
   link: 'https://github.com/vadym-loik/ohMyFood2',
 },
 {
-  img: '/src/images/goMikeDesign.jpg',
+  img: Photo5,
   subtitle: 'Web',
   title: 'Optimize',
   link: 'https://github.com/vadym-loik/optimize',

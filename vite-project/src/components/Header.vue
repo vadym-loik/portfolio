@@ -13,7 +13,7 @@
         <div class="profile__data">
           <div class="profile__border">
             <div class="profile__perfil">
-              <img src="../images/vadym_loik.jpg" alt="profile photo" />
+              <img src="@/assets/images/vadym_loik.jpg" alt="profile photo" />
             </div>
           </div>
 
