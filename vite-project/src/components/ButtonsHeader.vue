@@ -11,6 +11,10 @@
           <i class="ri-whatsapp-line"></i>
         </a>
 
+        <a href="mailto:loikfit@gmail.com" target="_blank" class="button button__small button__gray">
+          <i class="ri-mail-send-line"></i>
+        </a>
+
       </div>
     </div>
   </div>
