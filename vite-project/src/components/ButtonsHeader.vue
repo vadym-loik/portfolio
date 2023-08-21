@@ -2,7 +2,7 @@
   <div>
     <!-- BUTTONS -->
     <div class="profile__buttons">
-      <a href="https://drive.google.com/file/d/1E8DV7mwQiIWPCXufSc6dw4Ek3fiEX-eB/view?usp=sharing" class="button"
+      <a href="https://drive.google.com/file/d/1i_LRN1Yj5S-boKhcXC4EPeyP9E9kthaj/view?usp=drive_link" class="button"
         target="_blank">Download CV <i class="ri-folder-download-fill"></i></a>
 
       <div class="profile__buttons-small">
