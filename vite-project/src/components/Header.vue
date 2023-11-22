@@ -1,13 +1,6 @@
 <template>
   <div>
     <header class="profile container">
-      <!-- THEME BUTTON -->
-      <!-- <i
-      class="ri-moon-line change-theme"
-      :class="{ currentIcon: getCurrentIcon }"
-      id="theme-button"
-      @click="toggleTheme"
-    ></i> -->
 
       <div class="profile__container grid">
         <div class="profile__data">
@@ -29,9 +22,7 @@
             <a href="https://github.com/vadym-loik" target="_blank" class="profile__social-link">
               <i class="ri-github-line"></i>
             </a>
-            <!-- <a href="" target="_blank" class="profile__social-link">
-            <i class="ri-twitter-line"></i>
-          </a> -->
+
           </ul>
         </div>
 
@@ -62,44 +53,7 @@
 <script setup>
 import ButtonsHeader from './ButtonsHeader.vue';
 
-// import { ref, onMounted } from 'vue';
 
-// const darkTheme = 'dark-theme';
-// const iconTheme = 'ri-sun-line';
-
-// const selectedTheme = localStorage.getItem('selected-theme');
-// const selectedIcon = localStorage.getItem('selected-icon');
-
-// const currentTheme = ref('');
-
-// const toggleTheme = () => {
-//   document.body.classList.toggle(darkTheme);
-//   themeButton.classList.toggle(iconTheme);
-//   localStorage.setItem('selected-theme', getCurrentTheme());
-//   localStorage.setItem('selected-icon', getCurrentIcon());
-// };
-
-// const getCurrentTheme = () => {
-//   return document.body.classList.contains(darkTheme) ? 'dark' : 'light';
-// };
-
-// const getCurrentIcon = () => {
-//   return themeButton.classList.contains(iconTheme)
-//     ? 'ri-moon-line'
-//     : 'ri-sun-line';
-// };
-
-// onMounted(() => {
-//   if (selectedTheme) {
-//     document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](
-//       darkTheme
-//     );
-//     themeButton.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](
-//       iconTheme
-//     );
-//   }
-//   currentTheme.value = getCurrentTheme();
-// });
 </script>
 
 <style lang="scss" scoped>
@@ -176,7 +130,7 @@ import ButtonsHeader from './ButtonsHeader.vue';
   }
 
   &__social-link {
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     color: $title-color;
     transition: 0.3s;
   }

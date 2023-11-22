@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <section class="projects">
     <div class="projects__content" id="projects" v-for="(project, index) in allProjects" :key="index">
-      <article class="projects__card">
+      <div class="projects__card">
         <img :src="project.img" alt="project screenshot" class="projects__img" />
         <div class="projects__modal">
           <div>
@@ -12,9 +12,9 @@
             </a>
           </div>
         </div>
-      </article>
+      </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
@@ -76,59 +76,67 @@ const allProjects = ref([{
   box-shadow: 0 8px 24px hsla($hue, $sat, $lig, 0.25);
 }
 
-
-.projects__card {
+.projects {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  position: relative;
-  border-radius: 1rem;
-  overflow: hidden;
-}
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 
-.projects__content:not(:last-child) {
-  margin-bottom: 20px;
-}
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-// .projects__card img {
-//   width: 100%;
-//   height: 100%;
-// }
+  &__card {
+    max-width: 275px;
+    max-height: 275px;
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
 
-.projects__modal {
-  position: absolute;
-  width: 100%;
-  height: 50%;
-  bottom: -100%;
-  left: 0;
-  background: linear-gradient(180deg,
-      hsla($hue, 24%, 40%, 0.3) 0%,
-      hsla($hue, 24%, 4%, 1) 95%);
-  // display: grid;
-  // align-items: flex-end;
-  padding: 1.5rem 1.25rem;
-  transition: 0.3s;
-}
+  // &__card img {
+  //   width: 100%;
+  //   height: 100%;
+  //   object-fit: cover;
+  // }
 
-.projects__subtitle,
-.projects__title {
-  color: #fff;
-}
+  &__modal {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    bottom: -100%;
+    left: 0;
+    background: linear-gradient(180deg,
+        hsla($hue, 24%, 40%, 0.3) 0%,
+        hsla($hue, 24%, 4%, 1) 95%);
+    padding: 1.5rem 1.25rem;
+    transition: 0.3s;
+  }
 
-.projects__subtitle {
-  font-size: $smaller-font-size;
-}
+  &__subtitle,
+  &__title {
+    color: #fff;
+  }
 
-.projects__title {
-  font-size: $h3-font-size;
-  margin-bottom: 0.75rem;
-}
+  &__subtitle {
+    font-size: $smaller-font-size;
+  }
 
-.projects__button {
-  padding: 0.5rem;
-}
+  &__title {
+    font-size: $h3-font-size;
+    margin-bottom: 0.75rem;
+  }
 
-.projects__card:hover .projects__modal {
-  bottom: 0;
+  &__button {
+    padding: 0.5rem;
+  }
+
+
+
+  &__card:hover &__modal {
+    bottom: 0;
+  }
 }
 </style>

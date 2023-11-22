@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <section class="skills">
     <div class="skills__content grid" id="skills">
       <div class="skills__area">
         <h3 class="skills__title">Frontend developer</h3>
@@ -11,7 +11,6 @@
 
               <div>
                 <h3 class="skills__name">{{ skill }}</h3>
-                <span class="skills__level">Intermediate</span>
               </div>
             </div>
 
@@ -29,7 +28,6 @@
 
               <div>
                 <h3 class="skills__name">{{ skill }}</h3>
-                <span class="skills__level">Basic</span>
               </div>
             </div>
 
@@ -37,65 +35,62 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
 import { ref } from 'vue';
 
 const frontSkills = ref([
-  'HTML', 'CSS', 'JavaScript', 'Vue.js', 'Git', 'SASS',
+  'HTML', 'CSS', 'JavaScript', 'React.js', 'Vue.js', 'Git', 'GitHub', 'SASS',
 ])
 
 const backSkills = ref([
-  'Node.js', 'MySQL', 'NoSQL', 'MariaDB', 'MongoDB', 'Express.js', 'Mongoose',
+  'Node.js', 'SQL', 'NoSQL', 'MariaDB', 'MongoDB', 'Express.js', 'Mongoose',
 ])
 </script>
 
 <style lang="scss" scoped>
 @import '../assets/scss/variables.scss';
 
-.skills__content {
-  row-gap: 3.5rem;
-}
 
-.skills__title {
-  font-size: $h3-font-size;
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
+.skills {
+  &__content {
+    row-gap: 3.5rem;
+    margin: 0 40px;
+  }
 
-.skills__box {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  column-gap: 3rem;
-}
+  &__title {
+    font-size: $h3-font-size;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
 
-// .skills__group {
-//   display: grid;
-//   align-content: flex-start;
-//   row-gap: 1rem;
-// }
+  &__box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
 
-.skills__data {
-  display: flex;
-  column-gap: 0.375rem;
-  margin-bottom: 0.375rem;
-}
+  &__data {
+    display: flex;
+    column-gap: 0.375rem;
+  }
 
-.skills__data i {
-  font-size: 1rem;
-  color: $first-color;
-}
+  &__data i {
+    font-size: 1rem;
+    color: $first-color;
+  }
 
-.skills__name {
-  font-size: $normal-font-size;
-  font-weight: 500;
-  line-height: 18px;
-}
+  &__name {
+    font-size: $normal-font-size;
+    font-weight: 500;
+    line-height: 18px;
+  }
 
-.skills__level {
-  font-size: $small-font-size;
+  &__level {
+    font-size: $small-font-size;
+  }
 }
 </style>

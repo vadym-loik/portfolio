@@ -69,7 +69,7 @@ function toggleSkillsSection() {
 
 .filters {
   &__content {
-    margin: 2rem 0 2.5rem;
+    margin: 2rem 1rem 2.5rem;
     background-color: $text-color-lighten;
     padding: 0.375rem;
     border-radius: 0.75rem;
