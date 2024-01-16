@@ -25,9 +25,16 @@ import Photo2 from '@/assets/images/piiquante.png';
 import Photo3 from '@/assets/images/kanap.png';
 import Photo4 from '@/assets/images/ohMyFood.png';
 import Photo5 from '@/assets/images/goMikeDesign.png';
+import Photo6 from '@/assets/images/hopways-facture.png';
 
 
 const allProjects = ref([{
+  img: Photo6,
+  subtitle: 'Web',
+  title: 'Hopways-Facture',
+  link: 'https://hopways-facture.vercel.app/'
+},
+{
   img: Photo1,
   subtitle: 'Web',
   title: 'Groupomania',
