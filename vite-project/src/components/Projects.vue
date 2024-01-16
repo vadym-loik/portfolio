@@ -103,11 +103,11 @@ const allProjects = ref([{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
 
-  // &__card img {
-  //   width: 100%;
-  //   height: 100%;
-  //   object-fit: cover;
-  // }
+  &__card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
   &__modal {
     position: absolute;
