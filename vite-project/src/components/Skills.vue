@@ -42,7 +42,7 @@
 import { ref } from 'vue';
 
 const frontSkills = ref([
-  'HTML', 'CSS', 'JavaScript', 'React.js', 'Next.js', 'Vue.js', 'TypeScript', 'Git', 'GitHub', 'SASS',
+  'HTML', 'CSS', 'JavaScript', 'React.js', 'Next.js', 'Vue.js', 'Nuxt.js', 'TypeScript', 'Git', 'GitHub', 'SASS',
 ])
 
 const backSkills = ref([

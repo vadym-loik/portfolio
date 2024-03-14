@@ -26,9 +26,16 @@ import Photo3 from '@/assets/images/kanap.png';
 import Photo4 from '@/assets/images/ohMyFood.png';
 import Photo5 from '@/assets/images/goMikeDesign.png';
 import Photo6 from '@/assets/images/hopways-facture.png';
+import Photo7 from '@/assets/images/snugglepaws.png';
 
 
 const allProjects = ref([{
+  img: Photo7,
+  subtitle: 'Web',
+  title: 'Snugglepaws',
+  link: 'https://snugglepaws.fr/',
+},
+{
   img: Photo6,
   subtitle: 'Web',
   title: 'Hopways-Facture',
@@ -64,6 +71,7 @@ const allProjects = ref([{
   title: 'Optimize',
   link: 'https://github.com/vadym-loik/optimize',
 },
+
 ]);
 
 </script>
