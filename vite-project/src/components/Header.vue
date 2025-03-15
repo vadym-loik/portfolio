@@ -29,14 +29,14 @@
         <!-- PROFILE INFO -->
         <div class="profile__info grid">
           <div class="profile__info-group">
-            <h3 class="profile__info-number">1,5</h3>
+            <h3 class="profile__info-number">2</h3>
             <p class="profile__info-description">
               Year of <br />
               work
             </p>
           </div>
           <div class="profile__info-group">
-            <h3 class="profile__info-number">7</h3>
+            <h3 class="profile__info-number">8</h3>
             <p class="profile__info-description">
               Completed <br />
               projects
