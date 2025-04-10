@@ -42,11 +42,11 @@
 import { ref } from 'vue';
 
 const frontSkills = ref([
-  'HTML', 'CSS', 'JavaScript', 'React.js', 'Next.js', 'Vue.js', 'Nuxt.js', 'TypeScript', 'Git', 'GitHub', 'SASS',
+  'HTML', 'CSS', 'JavaScript', 'C#', 'Blazor', 'React.js', 'Next.js', 'Vue.js', 'Nuxt.js', 'TypeScript', 'Git', 'GitHub', 'SASS',
 ])
 
 const backSkills = ref([
-  'Node.js', 'SQL', 'NoSQL', 'MariaDB', 'MongoDB', 'PlanetscaleDB', 'Express.js', 'Mongoose', 'DrizzleORM',
+  'Node.js', 'SQL', 'NoSQL', 'MariaDB', 'MongoDB', 'PlanetscaleDB', 'Express.js', 'Mongoose', 'DrizzleORM', 'ASP.Net'
 ])
 </script>
 
