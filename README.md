@@ -1,7 +1,43 @@
-# Vue 3 + Vite
+# Vadym Loik — Portfolio
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Personal portfolio site: experience, projects, skills, about and contact.
 
-## Recommended IDE Setup
+- **Stack:** Next.js 16 (App Router, static export), React 19, TypeScript, Tailwind CSS 4
+- **Languages:** English (`/en`) and French (`/fr`). The page `/` sends the visitor to the saved
+  language, then to the browser language, else to English.
+- **Theme:** light and dark (pastel green palette). The saved choice comes first, then the system setting.
+- **Hosting:** GitHub Pages, published by GitHub Actions on every push to `main`.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Where to change the content
+
+| What | File |
+| --- | --- |
+| Links (CV, e-mail, LinkedIn, GitHub, WhatsApp), dates, stacks, skills | `src/content/data.ts` |
+| All texts in English | `src/i18n/en.ts` |
+| All texts in French | `src/i18n/fr.ts` |
+| Colors | `src/app/globals.css` (`:root` = light, `.dark` = dark) |
+| Photo and project screenshots | `src/assets/` |
+
+"X+ years of experience" is calculated at build time from `careerStart` in `src/content/data.ts`.
+
+## Run locally
+
+Node.js version: see `.nvmrc`.
+
+```bash
+npm install
+npm run dev        # http://localhost:3000/en
+npm run lint
+npm run typecheck
+npm run build      # static site in out/
+```
+
+## Deploy (GitHub Pages)
+
+One time: on GitHub, open *Settings → Pages → Build and deployment → Source* and select **GitHub Actions**.
+
+After that, every push to `main` runs `.github/workflows/deploy.yml`: lint, type check, build and deploy.
+The site is at `https://vadym-loik.github.io/portfolio/`. The workflow sets the base path (`/portfolio`)
+through `PAGES_BASE_PATH`, so the same code also works on a custom domain (empty base path).
+
+The old Vue site is in the `old-vue-site` branch.
