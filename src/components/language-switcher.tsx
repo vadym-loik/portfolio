@@ -1,8 +1,12 @@
 "use client";
 
-import Link from "next/link";
+import { basePath } from "@/lib/base-path";
 import { LOCALE_STORAGE_KEY, locales, type Locale } from "@/i18n/config";
 
+/**
+ * Plain links (full page load), not next/link: a client-side navigation renders <html> again
+ * and removes the "dark" class that the theme script adds. A full load runs the script again.
+ */
 export function LanguageSwitcher({ current, label }: { current: Locale; label: string }) {
   return (
     <nav aria-label={label}>
@@ -11,12 +15,11 @@ export function LanguageSwitcher({ current, label }: { current: Locale; label: s
           const active = locale === current;
           return (
             <li key={locale}>
-              <Link
-                href={`/${locale}`}
+              <a
+                href={`${basePath}/${locale}/`}
                 hrefLang={locale}
                 lang={locale}
                 aria-current={active ? "page" : undefined}
-                scroll={false}
                 onClick={() => {
                   try {
                     localStorage.setItem(LOCALE_STORAGE_KEY, locale);
@@ -29,7 +32,7 @@ export function LanguageSwitcher({ current, label }: { current: Locale; label: s
                 }`}
               >
                 {locale}
-              </Link>
+              </a>
             </li>
           );
         })}
