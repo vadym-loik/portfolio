@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+/* Dark theme: class "dark" on <html> (set by the inline script in the layout) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------- Pastel green palette ---------- */
+:root {
+  --bg: #f3f8f2; /* mint cream */
+  --surface: #ffffff;
+  --surface-soft: #e6f1e4; /* pale sage */
+  --line: #d3e4d2;
+  --ink: #1c2b21;
+  --muted: #56695b;
+  --accent: #a8d5b0; /* pastel green */
+  --accent-soft: #d6ecd8;
+  --accent-strong: #2f7048; /* text, links and buttons: contrast > 4.5 on light backgrounds */
+  --on-accent: #ffffff;
+  color-scheme: light;
+}
+
+.dark {
+  --bg: #101813;
+  --surface: #17221b;
+  --surface-soft: #1d2b22;
+  --line: #2a3c30;
+  --ink: #e4f0e5;
+  --muted: #9fb7a6;
+  --accent: #6fa982;
+  --accent-soft: #223428;
+  --accent-strong: #a8d5b0;
+  --on-accent: #101813;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-soft: var(--surface-soft);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-strong: var(--accent-strong);
+  --color-on-accent: var(--on-accent);
+
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-padding-top: 5rem; /* sticky header does not cover section titles */
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+::selection {
+  background: var(--accent);
+  color: #101813;
+}
+
+@layer components {
+  .container-site {
+    width: 100%;
+    max-width: 72rem;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 2.5rem;
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 1.5rem;
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    background: var(--accent-soft);
+    color: var(--ink);
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 999px;
+    padding: 0.8rem 1.5rem;
+    font-weight: 600;
+    transition:
+      background-color 200ms ease,
+      color 200ms ease,
+      box-shadow 200ms ease,
+      translate 200ms ease;
+
+    &:focus-visible {
+      outline: 2px solid var(--accent-strong);
+      outline-offset: 3px;
+    }
+
+    @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+      &:hover {
+        translate: 0 -2px;
+      }
+    }
+  }
+
+  .btn-primary {
+    background: var(--accent-strong);
+    color: var(--on-accent);
+    &:hover {
+      box-shadow: 0 10px 24px -10px var(--accent-strong);
+    }
+  }
+
+  .btn-outline {
+    box-shadow: inset 0 0 0 1px var(--line);
+    &:hover {
+      background: var(--surface);
+      box-shadow: inset 0 0 0 1px var(--accent-strong);
+    }
+  }
+
+  .icon-btn {
+    display: inline-grid;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 999px;
+    color: var(--ink);
+    transition: background-color 200ms ease, color 200ms ease;
+
+    &:hover {
+      background: var(--accent-soft);
+      color: var(--accent-strong);
+    }
+    &:focus-visible {
+      outline: 2px solid var(--accent-strong);
+      outline-offset: 2px;
+    }
+  }
+
+  .link {
+    color: var(--accent-strong);
+    font-weight: 600;
+    text-underline-offset: 4px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
