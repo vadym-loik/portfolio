@@ -36,7 +36,11 @@ export function Experience({ locale, t }: { locale: Locale; t: Dictionary }) {
                   ) : (
                     job.company
                   )}
-                  <span className="font-normal text-muted"> · {job.location}</span>
+                  <span className="font-normal text-muted">
+                    {" "}
+                    · {job.location}
+                    {job.remote && ` · ${t.experience.remote}`}
+                  </span>
                 </p>
                 <p className="mt-4 leading-relaxed text-muted">{t.experience.items[job.id]}</p>
                 <div className="mt-5">

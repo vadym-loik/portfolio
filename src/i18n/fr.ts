@@ -29,6 +29,7 @@ export const fr: Dictionary = {
     title: "Expérience",
     present: "Aujourd'hui",
     via: "via",
+    remote: "À distance",
     nda: "Stack et détails du projet sous NDA.",
     items: {
       stellantis:

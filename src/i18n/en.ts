@@ -29,6 +29,7 @@ export const en = {
     title: "Experience",
     present: "Present",
     via: "via",
+    remote: "Remote",
     nda: "Stack and project details are under NDA.",
     items: {
       stellantis:

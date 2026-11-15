@@ -35,6 +35,8 @@ export type Experience = {
   /** "YYYY-MM"; no value = current job */
   end?: string;
   location: string;
+  /** Remote work from France */
+  remote?: boolean;
   /** No value = stack is not public (NDA) */
   stack?: string[];
 };
@@ -54,7 +56,8 @@ export const experience: Experience[] = [
     role: "Front-end Developer",
     start: "2024-05",
     end: "2025-06",
-    location: "France",
+    location: "USA",
+    remote: true,
     stack: ["C#", "Blazor", ".NET", "HTML", "CSS", "Tailwind CSS"],
   },
   {
