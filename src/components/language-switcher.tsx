@@ -1,7 +1,7 @@
 "use client";
 
 import { basePath } from "@/lib/base-path";
-import { LOCALE_STORAGE_KEY, locales, type Locale } from "@/i18n/config";
+import { LOCALE_STORAGE_KEY, localeLabel, locales, type Locale } from "@/i18n/config";
 
 /**
  * Plain links (full page load), not next/link: a client-side navigation renders <html> again
@@ -27,11 +27,11 @@ export function LanguageSwitcher({ current, label }: { current: Locale; label: s
                     // Private mode: the choice is not saved
                   }
                 }}
-                className={`block rounded-full px-3 py-1.5 uppercase transition-colors ${
+                className={`block rounded-full px-3 py-1.5 transition-colors ${
                   active ? "bg-accent-strong text-on-accent" : "text-muted hover:text-ink"
                 }`}
               >
-                {locale}
+                {localeLabel[locale]}
               </a>
             </li>
           );

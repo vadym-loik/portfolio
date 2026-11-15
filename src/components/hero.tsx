@@ -18,7 +18,7 @@ export function Hero({ locale, t }: { locale: Locale; t: Dictionary }) {
           <MapPinIcon />
           {t.hero.location}
         </p>
-        <h1 className="text-5xl font-bold tracking-tight md:text-6xl">{profile.name}</h1>
+        <h1 className="text-5xl font-bold tracking-tight md:text-6xl">{t.name}</h1>
         <p className="mt-3 text-2xl font-semibold text-accent-strong md:text-3xl">{t.hero.role}</p>
         <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">{t.hero.intro}</p>
 

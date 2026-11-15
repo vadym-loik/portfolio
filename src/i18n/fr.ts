@@ -1,8 +1,11 @@
-import type { Dictionary } from "./en";
+import { en, type Dictionary } from "./en";
+
+const name = en.name;
 
 export const fr: Dictionary = {
+  name,
   meta: {
-    title: "Vadym Loik — Développeur Full-stack",
+    title: `${name} — Développeur Full-stack`,
     description:
       "Développeur full-stack en France : React, Next.js, Vue.js, TypeScript, Node.js, SQL. Expérience en C#, Blazor et .NET.",
   },
@@ -21,7 +24,7 @@ export const fr: Dictionary = {
     intro:
       "Je crée des applications web rapides, claires et fiables, de l'interface à la base de données. Je travaille avec React, Next.js, Vue.js, TypeScript et Node.js.",
     yearsLabel: "ans d'expérience",
-    photoAlt: "Photo de Vadym Loik",
+    photoAlt: `Photo de ${name}`,
     cv: "Télécharger le CV",
     contact: "Me contacter",
   },

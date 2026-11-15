@@ -14,7 +14,6 @@ import optimize from "@/assets/projects/optimize.webp";
 const phone = "+33 7 68 85 69 44";
 
 export const profile = {
-  name: "Vadym Loik",
   email: "loikfit@gmail.com",
   phone,
   whatsapp: `https://wa.me/${phone.replace(/\D/g, "")}`,

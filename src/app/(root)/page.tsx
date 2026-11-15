@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { locales } from "@/i18n/config";
+import { localeLabel, locales } from "@/i18n/config";
 import { RedirectToLocale } from "./redirect-to-locale";
 
 export default function RootPage() {
@@ -10,8 +10,8 @@ export default function RootPage() {
       <ul className="flex gap-6 font-semibold">
         {locales.map((locale) => (
           <li key={locale}>
-            <Link href={`/${locale}`} className="link uppercase">
-              {locale}
+            <Link href={`/${locale}`} className="link">
+              {localeLabel[locale]}
             </Link>
           </li>
         ))}

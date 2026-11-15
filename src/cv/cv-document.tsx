@@ -96,10 +96,10 @@ export function CvDocument({ locale, t }: { locale: Locale; t: Dictionary }) {
   const skillGroups = Object.entries(skills) as [SkillGroupId, string[]][];
 
   return (
-    <Document title={`${profile.name} — CV`} author={profile.name} subject={t.hero.role} language={locale}>
+    <Document title={`${t.name} — CV`} author={t.name} subject={t.hero.role} language={locale}>
       <Page size="A4" style={s.page}>
         <View style={s.main}>
-          <Text style={s.name}>{profile.name}</Text>
+          <Text style={s.name}>{t.name}</Text>
           <Text style={s.role}>{t.hero.role}</Text>
           <Text style={[s.meta, { marginTop: 2 }]}>{t.hero.location}</Text>
 

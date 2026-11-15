@@ -1,8 +1,12 @@
 import type { ExperienceId, ProjectId, SkillGroupId } from "@/content/data";
 
+const name = "Vadym Loik";
+
 export const en = {
+  /** Full name in this language */
+  name,
   meta: {
-    title: "Vadym Loik — Full-stack Developer",
+    title: `${name} — Full-stack Developer`,
     description:
       "Full-stack developer in France: React, Next.js, Vue.js, TypeScript, Node.js, SQL. Experience with C#, Blazor and .NET.",
   },
@@ -21,7 +25,7 @@ export const en = {
     intro:
       "I build fast, clear and reliable web applications, from the user interface to the database. I work with React, Next.js, Vue.js, TypeScript and Node.js.",
     yearsLabel: "years of experience",
-    photoAlt: "Photo of Vadym Loik",
+    photoAlt: `Photo of ${name}`,
     cv: "Download CV",
     contact: "Contact me",
   },

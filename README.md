@@ -3,8 +3,8 @@
 Personal portfolio site: experience, projects, skills, about and contact.
 
 - **Stack:** Next.js 16 (App Router, static export), React 19, TypeScript, Tailwind CSS 4
-- **Languages:** English (`/en`) and French (`/fr`). The page `/` sends the visitor to the saved
-  language, then to the browser language, else to English.
+- **Languages:** English (`/en`), French (`/fr`) and Ukrainian (`/uk`). The page `/` sends the visitor
+  to the saved language, then to the browser language, else to English.
 - **Theme:** light and dark (pastel green palette). The saved choice comes first, then the system setting.
 - **Hosting:** GitHub Pages, published by GitHub Actions on every push to `main`.
 
@@ -15,6 +15,7 @@ Personal portfolio site: experience, projects, skills, about and contact.
 | Links (e-mail, phone, LinkedIn, GitHub, site), dates, stacks, skills | `src/content/data.ts` |
 | All texts in English | `src/i18n/en.ts` |
 | All texts in French | `src/i18n/fr.ts` |
+| All texts in Ukrainian | `src/i18n/uk.ts` |
 | Colors | `src/app/globals.css` (`:root` = light, `.dark` = dark) |
 | Photo and project screenshots | `src/assets/` |
 
@@ -24,7 +25,7 @@ Personal portfolio site: experience, projects, skills, about and contact.
 
 The "Download CV" button gives a PDF that `next build` makes from the same data as the site
 (`src/content/data.ts` and the dictionaries). There is one PDF per language:
-`/en/vadym-loik-cv.pdf` and `/fr/vadym-loik-cv.pdf`. Change the site content, and the CV changes too.
+`/en/vadym-loik-cv.pdf`, `/fr/vadym-loik-cv.pdf` and `/uk/vadym-loik-cv.pdf`. Change the site content, and the CV changes too.
 
 - Layout: `src/cv/cv-document.tsx` ([@react-pdf/renderer](https://react-pdf.org))
 - Font: `src/cv/fonts/` — static Manrope TTF files (Latin + Cyrillic), made from the Google Fonts

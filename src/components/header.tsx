@@ -6,12 +6,18 @@ import { ThemeToggle } from "./theme-toggle";
 export const sectionIds = ["experience", "projects", "skills", "about", "contact"] as const;
 
 export function Header({ locale, t }: { locale: Locale; t: Dictionary }) {
+  // "Vadym Loik" → "VL", "Вадим Лоік" → "ВЛ"
+  const initials = t.name
+    .split(" ")
+    .map((word) => word[0])
+    .join("");
+
   return (
     <header className="sticky top-0 z-20 border-b border-line/70 bg-bg/80 backdrop-blur-md">
       <div className="container-site flex h-16 items-center justify-between gap-4">
         <a href="#top" className="flex items-center gap-2 font-bold tracking-tight">
-          <span className="grid size-9 place-items-center rounded-full bg-accent text-sm text-[#101813]">VL</span>
-          <span className="hidden sm:inline">Vadym Loik</span>
+          <span className="grid size-9 place-items-center rounded-full bg-accent text-sm text-[#101813]">{initials}</span>
+          <span className="hidden sm:inline">{t.name}</span>
         </a>
 
         <nav aria-label="Main" className="hidden md:block">
