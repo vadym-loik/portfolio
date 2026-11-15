@@ -27,6 +27,8 @@ The "Download CV" button gives a PDF that `next build` makes from the same data 
 `/en/vadym-loik-cv.pdf` and `/fr/vadym-loik-cv.pdf`. Change the site content, and the CV changes too.
 
 - Layout: `src/cv/cv-document.tsx` ([@react-pdf/renderer](https://react-pdf.org))
+- Font: `src/cv/fonts/` — static Manrope TTF files (Latin + Cyrillic), made from the Google Fonts
+  variable font with `fonttools varLib.instancer --static --update-name-table`
 - Route that writes the file: `src/app/[lang]/vadym-loik-cv.pdf/route.ts`
 
 ## Run locally

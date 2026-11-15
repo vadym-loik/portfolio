@@ -1,7 +1,8 @@
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Manrope } from "next/font/google";
 
-export const jakarta = Plus_Jakarta_Sans({
-  variable: "--font-jakarta",
-  subsets: ["latin", "latin-ext"],
+// Manrope has Latin and Cyrillic letters (English, French and Ukrainian)
+export const manrope = Manrope({
+  variable: "--font-manrope",
+  subsets: ["latin", "latin-ext", "cyrillic"],
   weight: ["400", "500", "600", "700"],
 });

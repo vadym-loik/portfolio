@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { hasLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n";
 import { themeScript } from "@/lib/theme";
-import { jakarta } from "../fonts";
+import { manrope } from "../fonts";
 import "../globals.css";
 
 // Only /en and /fr exist: other values give 404 (needed for a static export)
@@ -38,7 +38,7 @@ export default async function LangLayout({ children, params }: LayoutProps<"/[la
 
   return (
     // The theme script adds the "dark" class before React loads
-    <html lang={lang} className={jakarta.variable} suppressHydrationWarning>
+    <html lang={lang} className={manrope.variable} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>

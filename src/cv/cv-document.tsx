@@ -9,12 +9,13 @@ import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n";
 import { formatMonth } from "@/lib/dates";
 
-// Same font as the site. react-pdf reads TTF/WOFF files (not WOFF2).
-const fontDir = path.join(process.cwd(), "node_modules/@fontsource/plus-jakarta-sans/files");
+// Same font as the site (Manrope, Latin + Cyrillic in one file).
+// Static TTF files made from the Google Fonts variable font; license in fonts/OFL.txt.
+const fontDir = path.join(process.cwd(), "src/cv/fonts");
 Font.register({
-  family: "Jakarta",
+  family: "Manrope",
   fonts: [400, 500, 600, 700].map((fontWeight) => ({
-    src: path.join(fontDir, `plus-jakarta-sans-latin-${fontWeight}-normal.woff`),
+    src: path.join(fontDir, `manrope-${fontWeight}.ttf`),
     fontWeight,
   })),
 });
@@ -32,7 +33,13 @@ const color = {
 };
 
 const s = StyleSheet.create({
-  page: { flexDirection: "row", fontFamily: "Jakarta", fontSize: 9, lineHeight: 1.45, color: color.ink },
+  page: {
+    flexDirection: "row",
+    fontFamily: "Manrope",
+    fontSize: 9,
+    lineHeight: 1.45,
+    color: color.ink,
+  },
   main: { flex: 1, paddingVertical: 32, paddingHorizontal: 28 },
   side: { width: 196, backgroundColor: color.soft, paddingVertical: 32, paddingHorizontal: 16 },
   name: { fontSize: 24, fontWeight: 700, lineHeight: 1.1 },
