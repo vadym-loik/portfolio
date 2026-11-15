@@ -98,6 +98,9 @@ export const fr: Dictionary = {
     text: "Vous avez un projet ou une offre d'emploi ? Écrivez-moi.",
     email: "Envoyer un e-mail",
   },
+  cv: {
+    summaryTitle: "Profil",
+  },
   footer: {
     rights: "Tous droits réservés.",
   },

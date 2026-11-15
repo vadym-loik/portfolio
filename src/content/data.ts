@@ -11,13 +11,16 @@ import kanap from "@/assets/projects/kanap.webp";
 import ohmyfood from "@/assets/projects/ohmyfood.webp";
 import optimize from "@/assets/projects/optimize.webp";
 
+const phone = "+33 7 68 85 69 44";
+
 export const profile = {
   name: "Vadym Loik",
   email: "loikfit@gmail.com",
-  whatsapp: "https://api.whatsapp.com/send?phone=33768856944",
+  phone,
+  whatsapp: `https://wa.me/${phone.replace(/\D/g, "")}`,
   linkedin: "https://www.linkedin.com/in/vadym-loik-651ba27b/",
   github: "https://github.com/vadym-loik",
-  cv: "https://drive.google.com/file/d/1Iul1iOAgchme0Hr-F4S9RLSsFYaYXerk/view?usp=sharing",
+  website: "https://vadym-loik.github.io/portfolio/",
   /** First job as a developer: used for "X+ years of experience" */
   careerStart: "2022-06",
 };

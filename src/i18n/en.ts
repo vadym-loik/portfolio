@@ -98,6 +98,9 @@ export const en = {
     text: "Do you have a project or a job offer? Write to me.",
     email: "Send an e-mail",
   },
+  cv: {
+    summaryTitle: "Profile",
+  },
   footer: {
     rights: "All rights reserved.",
   },

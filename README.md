@@ -12,13 +12,22 @@ Personal portfolio site: experience, projects, skills, about and contact.
 
 | What | File |
 | --- | --- |
-| Links (CV, e-mail, LinkedIn, GitHub, WhatsApp), dates, stacks, skills | `src/content/data.ts` |
+| Links (e-mail, phone, LinkedIn, GitHub, site), dates, stacks, skills | `src/content/data.ts` |
 | All texts in English | `src/i18n/en.ts` |
 | All texts in French | `src/i18n/fr.ts` |
 | Colors | `src/app/globals.css` (`:root` = light, `.dark` = dark) |
 | Photo and project screenshots | `src/assets/` |
 
 "X+ years of experience" is calculated at build time from `careerStart` in `src/content/data.ts`.
+
+## CV (PDF)
+
+The "Download CV" button gives a PDF that `next build` makes from the same data as the site
+(`src/content/data.ts` and the dictionaries). There is one PDF per language:
+`/en/vadym-loik-cv.pdf` and `/fr/vadym-loik-cv.pdf`. Change the site content, and the CV changes too.
+
+- Layout: `src/cv/cv-document.tsx` ([@react-pdf/renderer](https://react-pdf.org))
+- Route that writes the file: `src/app/[lang]/vadym-loik-cv.pdf/route.ts`
 
 ## Run locally
 

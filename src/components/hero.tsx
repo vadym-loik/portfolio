@@ -1,11 +1,14 @@
 import Image from "next/image";
 import photo from "@/assets/vadym-loik.webp";
 import { profile } from "@/content/data";
+import { cvPath } from "@/cv/file";
+import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n";
+import { basePath } from "@/lib/base-path";
 import { yearsSince } from "@/lib/dates";
 import { DownloadIcon, GitHubIcon, LinkedInIcon, MapPinIcon, MailIcon } from "./icons";
 
-export function Hero({ t }: { t: Dictionary }) {
+export function Hero({ locale, t }: { locale: Locale; t: Dictionary }) {
   const years = yearsSince(profile.careerStart);
 
   return (
@@ -20,7 +23,8 @@ export function Hero({ t }: { t: Dictionary }) {
         <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">{t.hero.intro}</p>
 
         <div className="mt-8 flex flex-wrap items-center gap-3">
-          <a href={profile.cv} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+          {/* PDF made at build time from the site data (src/cv) */}
+          <a href={`${basePath}${cvPath(locale)}`} download className="btn btn-primary">
             <DownloadIcon />
             {t.hero.cv}
           </a>

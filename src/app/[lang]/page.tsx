@@ -19,7 +19,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
     <>
       <Header locale={lang} t={t} />
       <main>
-        <Hero t={t} />
+        <Hero locale={lang} t={t} />
         <Experience locale={lang} t={t} />
         <Projects t={t} />
         <Skills t={t} />
