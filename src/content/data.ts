@@ -3,6 +3,7 @@
  * Texts in each language are in src/i18n/en.ts and src/i18n/fr.ts.
  */
 import type { StaticImageData } from "next/image";
+import dolicare from "@/assets/projects/dolicare.webp";
 import snugglepaws from "@/assets/projects/snugglepaws.webp";
 import hopways from "@/assets/projects/hopways-facture.webp";
 import groupomania from "@/assets/projects/groupomania.webp";
@@ -83,6 +84,7 @@ export const experience: Experience[] = [
 ];
 
 export type ProjectId =
+  | "dolicare"
   | "snugglepaws"
   | "hopways"
   | "groupomania"
@@ -98,10 +100,19 @@ export type Project = {
   stack: string[];
   site?: string;
   code?: string;
+  /** Built for my own use, not for a client */
+  personal?: boolean;
 };
 
-/** Real projects for clients, newest first */
+/** Real projects, newest first */
 export const projects: Project[] = [
+  {
+    id: "dolicare",
+    title: "DoliCare",
+    image: dolicare,
+    stack: ["Kotlin", "Jetpack Compose", "Android", "Firebase", "Cloud Firestore", "GitHub Actions"],
+    personal: true,
+  },
   {
     id: "snugglepaws",
     title: "Snuggle Paws",

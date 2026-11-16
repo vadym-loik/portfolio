@@ -35,7 +35,12 @@ function ProjectCard({ project, t, featured }: { project: Project; t: Dictionary
         />
       </div>
       <div className="flex flex-1 flex-col gap-4 p-6 md:p-8">
-        {featured && <span className="chip self-start bg-accent font-semibold text-[#101813]">{t.projects.featured}</span>}
+        {(featured || project.personal) && (
+          <div className="flex flex-wrap gap-2">
+            {featured && <span className="chip bg-accent font-semibold text-[#101813]">{t.projects.featured}</span>}
+            {project.personal && <span className="chip">{t.projects.personal}</span>}
+          </div>
+        )}
         <h3 className="text-2xl font-semibold">{project.title}</h3>
         <p className="leading-relaxed text-muted">{t.projects.items[project.id]}</p>
         <StackList items={project.stack} />

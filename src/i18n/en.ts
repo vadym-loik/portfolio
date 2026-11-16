@@ -49,11 +49,14 @@ export const en = {
   projects: {
     title: "Projects",
     featured: "Featured",
+    personal: "Personal project",
     site: "Website",
     code: "Code",
     trainingTitle: "Training projects",
     trainingIntro: "Projects from the OpenClassrooms “Web Developer” program.",
     items: {
+      dolicare:
+        "Android app that I built for my family. It tracks a sick child's fever and medicine doses with the French health rules (HAS, ANSM): next-dose countdown, reminders, offline mode and live sharing between parents. Tested Firestore security rules, GDPR, CI. A memory aid, not medical advice.",
       snugglepaws:
         "Website of a dog leash brand that sells on Amazon. Two languages (EN/FR) with a separate store for each market, a blog and an admin panel to manage products and posts. Secure sign-in, Row Level Security in the database, security headers and CI on every push.",
       hopways:
