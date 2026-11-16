@@ -177,5 +177,5 @@ export const skills: Record<SkillGroupId, string[]> = {
   ],
   backend: ["Node.js", "Express", "C#", ".NET", "Supabase", "REST API"],
   databases: ["SQL", "PostgreSQL", "MySQL", "MariaDB", "MongoDB", "Mongoose", "Drizzle ORM", "Sequelize"],
-  tools: ["Git", "GitHub", "GitHub Actions", "Netlify", "Vercel", "Vite"],
+  tools: ["Git", "GitHub", "GitHub Actions", "Netlify", "Vercel", "Vite", "Claude Code"],
 };
