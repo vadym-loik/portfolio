@@ -55,6 +55,8 @@ export const en = {
     trainingTitle: "Training projects",
     trainingIntro: "Projects from the OpenClassrooms “Web Developer” program.",
     items: {
+      chas:
+        "Free, ad-free app for Android and iOS: days to events, days since events and progress to goals. Reminders, widgets, three languages, data on the device.",
       dolicare:
         "Android app that I built for my family. It tracks a sick child's fever and medicine doses with the French health rules (HAS, ANSM): next-dose countdown, reminders, offline mode and live sharing between parents. Tested Firestore security rules, GDPR, CI. A memory aid, not medical advice.",
       snugglepaws:

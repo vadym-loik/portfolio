@@ -54,6 +54,8 @@ export const fr: Dictionary = {
     trainingTitle: "Projets de formation",
     trainingIntro: "Projets du parcours OpenClassrooms « Développeur intégrateur web ».",
     items: {
+      chas:
+        "Application gratuite et sans pub pour Android et iOS : jours avant ou depuis un événement, objectifs. Rappels, widgets, trois langues, données sur l'appareil.",
       dolicare:
         "Application Android créée pour ma famille. Elle suit la fièvre et les médicaments d'un enfant malade selon les règles de la HAS et de l'ANSM : compte à rebours, rappels, hors ligne et partage en direct entre parents. Règles Firestore testées, RGPD, CI. Un aide-mémoire, pas un avis médical.",
       snugglepaws:

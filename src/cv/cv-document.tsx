@@ -11,6 +11,9 @@ import { formatMonth } from "@/lib/dates";
 
 // Same font as the site (Manrope, Latin + Cyrillic in one file).
 // Static TTF files made from the Google Fonts variable font; license in fonts/OFL.txt.
+/** The CV shows only the newest projects, so it fits on one page */
+const cvProjectCount = 3;
+
 const fontDir = path.join(process.cwd(), "src/cv/fonts");
 Font.register({
   family: "Manrope",
@@ -131,7 +134,7 @@ export function CvDocument({ locale, t }: { locale: Locale; t: Dictionary }) {
           </Section>
 
           <Section title={t.projects.title}>
-            {projects.map((project) => (
+            {projects.slice(0, cvProjectCount).map((project) => (
               <View key={project.id} style={s.item} wrap={false}>
                 <View style={s.row}>
                   <Text style={s.itemTitle}>{project.title}</Text>

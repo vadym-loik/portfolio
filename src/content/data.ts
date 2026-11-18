@@ -3,6 +3,7 @@
  * Texts in each language are in src/i18n/en.ts and src/i18n/fr.ts.
  */
 import type { StaticImageData } from "next/image";
+import chas from "@/assets/projects/chas.webp";
 import dolicare from "@/assets/projects/dolicare.webp";
 import snugglepaws from "@/assets/projects/snugglepaws.webp";
 import hopways from "@/assets/projects/hopways-facture.webp";
@@ -84,6 +85,7 @@ export const experience: Experience[] = [
 ];
 
 export type ProjectId =
+  | "chas"
   | "dolicare"
   | "snugglepaws"
   | "hopways"
@@ -106,6 +108,14 @@ export type Project = {
 
 /** Real projects, newest first */
 export const projects: Project[] = [
+  {
+    id: "chas",
+    title: "Chas",
+    image: chas,
+    stack: ["React Native", "Expo", "Expo Router", "TypeScript", "Android", "iOS", "GitHub Actions"],
+    code: "https://github.com/vadym-loik/chasApp",
+    personal: true,
+  },
   {
     id: "dolicare",
     title: "DoliCare",
